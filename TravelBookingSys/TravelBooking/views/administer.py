@@ -41,9 +41,12 @@ def show_customers(request):
         response['msg'] = 'success'
         response['total'] = total
     except  Exception as e:
-        response['msg'] = str(e)
-        print(str(e))
-        response['error_num'] = 1
+        if str(e) == 'range() arg 3 must not be zero':
+            response['msg'] = 'success'
+            response['error_num'] = 0
+        else:
+            response['msg'] = str(e)
+            response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -60,7 +63,7 @@ def show_admins(request):
             # 返回值增加了分页，把数据分成每页pagesize个数据
             admins = ADMINS.objects.all()
             listall = json.loads(serializers.serialize("json", admins))
-            total = int(len(listall))
+            total = len(listall)
             pagesize = int(request.GET.get('pagesize'))
             pagenum = int(request.GET.get('pagenum'))
             # print(pagesize, pagenum)
@@ -72,9 +75,12 @@ def show_admins(request):
         response['msg'] = 'success'
         response['total'] = total
     except  Exception as e:
-        response['msg'] = str(e)
-        print(str(e))
-        response['error_num'] = 1
+        if str(e) == 'range() arg 3 must not be zero':
+            response['msg'] = 'success'
+            response['error_num'] = 0
+        else:
+            response['msg'] = str(e)
+            response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -97,6 +103,7 @@ def add_location(request):
                     location=loc_name,
                     riskLevel=location_form.cleaned_data['riskLevel']
                 )
+                l.save()
                 response['msg'] = 'successfully'
                 response['error_num'] = 0
         else:
@@ -112,13 +119,17 @@ def add_location(request):
 @require_http_methods(['DELETE'])
 def delete_location(request):
     response = {}
-    DELETE = QueryDict(request.body)
-    loc_name = DELETE.get('location')
-    print(loc_name)
-    location = LOCATIONS.objects.get(location=loc_name)
-    location.delete()
-    response['msg'] = 'delete location successfully'
-    response['error_num'] = 0
+    try:
+        DELETE = QueryDict(request.body)
+        loc_name = DELETE.get('location')
+        print(loc_name)
+        location = LOCATIONS.objects.get(location=loc_name)
+        location.delete()
+        response['msg'] = 'delete location successfully'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -148,9 +159,12 @@ def show_location(request):
         response['msg'] = 'success'
         response['total'] = total
     except  Exception as e:
-        response['msg'] = str(e)
-        print(str(e))
-        response['error_num'] = 1
+        if str(e) == 'range() arg 3 must not be zero':
+            response['msg'] = 'success'
+            response['error_num'] = 0
+        else:
+            response['msg'] = str(e)
+            response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -201,9 +215,9 @@ def add_flight(request):
                     flightNum=flightNum,
                     price=flight_form.cleaned_data['price'],
                     numSeats=flight_form.cleaned_data['numSeats'],
-                    numAvial=flight_form.cleaned_data['numAvial'],
-                    FromCity=flight_form.cleaned_data['FromCity'],
-                    ArivCity=flight_form.cleaned_data['ArivCity']
+                    numAvail=flight_form.cleaned_data['numSeats'],
+                    FromCity=LOCATIONS.objects.get(location=flight_form.cleaned_data['FromCity']),
+                    ArivCity=LOCATIONS.objects.get(location=flight_form.cleaned_data['ArivCity'])
                 )
                 flight.save()
                 response['msg'] = 'successfully'
@@ -221,13 +235,16 @@ def add_flight(request):
 @require_http_methods(['DELETE'])
 def delete_flight(request):
     response = {}
-    DELETE = QueryDict(request.body)
-    flightNum = DELETE.get('flightNum')
-    print(flightNum)
-    flight = FLIGHTS.objects.get(flightNum=flightNum)
-    flight.delete()
-    response['msg'] = 'delete flight successfully'
-    response['error_num'] = 0
+    try:
+        DELETE = QueryDict(request.body)
+        flightNum = DELETE.get('flightNum')
+        flight = FLIGHTS.objects.get(flightNum=flightNum)
+        flight.delete()
+        response['msg'] = 'delete flight successfully'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -257,9 +274,12 @@ def show_flight(request):
         response['msg'] = 'success'
         response['total'] = total
     except  Exception as e:
-        response['msg'] = str(e)
-        print(str(e))
-        response['error_num'] = 1
+        if str(e) == 'range() arg 3 must not be zero':
+            response['msg'] = 'success'
+            response['error_num'] = 0
+        else:
+            response['msg'] = str(e)
+            response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -275,9 +295,9 @@ def change_flight(request):
                 flight = FLIGHTS.objects.get(flightNum=flightNum)
                 flight.price = flight_form.cleaned_data['price']
                 flight.numSeats = flight_form.cleaned_data['numSeats']
-                flight.numAvial = flight_form.cleaned_data['numAvial']
-                flight.FromCity = flight_form.cleaned_data['FromCity']
-                flight.ArivCity = flight_form.cleaned_data['ArivCity']
+                flight.numAvail = flight_form.cleaned_data['numAvail']
+                flight.FromCity = LOCATIONS.objects.get(location=flight_form.cleaned_data['FromCity'])
+                flight.ArivCity = LOCATIONS.objects.get(location=flight_form.cleaned_data['ArivCity'])
                 flight.save()
                 response['msg'] = 'successfully'
                 response['error_num'] = 0
@@ -311,10 +331,10 @@ def add_hotel(request):
             except:
 
                 hotel = HOTELS(
-                    location=hotel_loc,
+                    location=LOCATIONS.objects.get(location=hotel_loc),
                     price=hotel_form.cleaned_data['price'],
                     numRooms=hotel_form.cleaned_data['numRooms'],
-                    numAvail=hotel_form.cleaned_data['numAvail']
+                    numAvail=hotel_form.cleaned_data['numRooms']
                 )
                 hotel.save()
                 response['msg'] = 'successfully'
@@ -332,13 +352,17 @@ def add_hotel(request):
 @require_http_methods(['DELETE'])
 def delete_hotel(request):
     response = {}
-    DELETE = QueryDict(request.body)
-    hotel_loc = DELETE.get('location')
-    print(hotel_loc)
-    hotel = HOTELS.objects.get(location=hotel_loc)
-    hotel.delete()
-    response['msg'] = 'delete hotel successfully'
-    response['error_num'] = 0
+    try:
+        DELETE = QueryDict(request.body)
+        hotel_loc = DELETE.get('location')
+
+        hotel = HOTELS.objects.get(location=hotel_loc)
+        hotel.delete()
+        response['msg'] = 'delete hotel successfully'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -368,9 +392,12 @@ def show_hotel(request):
         response['msg'] = 'success'
         response['total'] = total
     except  Exception as e:
-        response['msg'] = str(e)
-        print(str(e))
-        response['error_num'] = 1
+        if str(e) == 'range() arg 3 must not be zero':
+            response['msg'] = 'success'
+            response['error_num'] = 0
+        else:
+            response['msg'] = str(e)
+            response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -420,10 +447,10 @@ def add_bus(request):
             except:
 
                 bus = BUS(
-                    location=bus_loc,
+                    location=LOCATIONS.objects.get(location=bus_loc),
                     price=bus_form.cleaned_data['price'],
                     numSeats=bus_form.cleaned_data['numSeats'],
-                    numAvail=bus_form.cleaned_data['numAvail']
+                    numAvail=bus_form.cleaned_data['numSeats']
                 )
 
                 bus.save()
@@ -442,13 +469,17 @@ def add_bus(request):
 @require_http_methods(['DELETE'])
 def delete_bus(request):
     response = {}
-    DELETE = QueryDict(request.body)
-    bus_loc = DELETE.get('location')
-    print(bus_loc)
-    bus = BUS.objects.get(location=bus_loc)
-    bus.delete()
-    response['msg'] = 'delete bus successfully'
-    response['error_num'] = 0
+    try:
+        DELETE = QueryDict(request.body)
+        bus_loc = DELETE.get('location')
+        print(bus_loc)
+        bus = BUS.objects.get(location=bus_loc)
+        bus.delete()
+        response['msg'] = 'delete bus successfully'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -478,9 +509,12 @@ def show_bus(request):
         response['msg'] = 'success'
         response['total'] = total
     except  Exception as e:
-        response['msg'] = str(e)
-        print(str(e))
-        response['error_num'] = 1
+        if str(e) == 'range() arg 3 must not be zero':
+            response['msg'] = 'success'
+            response['error_num'] = 0
+        else:
+            response['msg'] = str(e)
+            response['error_num'] = 1
     return JsonResponse(response)
 
 

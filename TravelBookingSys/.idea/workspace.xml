@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb83c780-3192-46c2-a2ff-cfa9a713488b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TravelBooking/views/administer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TravelBooking/views/customer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TravelBooking/views/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TravelBooking/views/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document/Document.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Document.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document/详细设计/实体类图.eddx" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/详细设计/实体类图.eddx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TravelBookingSys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TravelBookingSys.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TravelBooking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBookingSys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBookingSys/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBookingSys/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBookingSys/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/views/administer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/administer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +91,7 @@
       <workItem from="1638167025079" duration="1284000" />
       <workItem from="1638169225792" duration="10470000" />
       <workItem from="1638180822328" duration="1390000" />
-      <workItem from="1638182238702" duration="11313000" />
+      <workItem from="1638182238702" duration="14889000" />
     </task>
     <servers />
   </component>
@@ -126,22 +117,22 @@
     </state>
     <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1638061948198" />
     <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1638180847893" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1638194912861">
+    <state width="914" height="217" key="GridCell.Tab.0.bottom" timestamp="1638199116936">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1638194912861">
+    <state width="914" height="217" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
+    <state width="914" height="217" key="GridCell.Tab.0.center" timestamp="1638199116936">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1638194912861">
+    <state width="914" height="217" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
+    <state width="914" height="217" key="GridCell.Tab.0.left" timestamp="1638199116936">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1638194912861">
+    <state width="914" height="217" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
+    <state width="914" height="217" key="GridCell.Tab.0.right" timestamp="1638199116936">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
+    <state width="914" height="217" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
     <state x="649" y="226" key="SettingsEditor" timestamp="1638181587263">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

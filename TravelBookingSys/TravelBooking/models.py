@@ -35,7 +35,7 @@ class FLIGHTS(models.Model):
     flightNum = models.CharField(null=False, unique=True, max_length=50, primary_key=True)
     price = models.IntegerField(null=False)
     numSeats = models.IntegerField(null=False)
-    numAvial = models.IntegerField(null=False)
+    numAvail = models.IntegerField(null=False)
     FromCity = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, related_name='FromCity')
     ArivCity = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, related_name='ArivCity')
     class Meta:

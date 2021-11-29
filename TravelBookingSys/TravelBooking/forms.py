@@ -36,10 +36,10 @@ class LOCATIONSForm(forms.Form):
 
 
 class FLIGHTSForm(forms.Form):
-    flightNum = forms.CharField(label="location",  max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    flightNum = forms.CharField(label="flightNum",  max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))
     price = forms.IntegerField(label='price')
     numSeats = forms.IntegerField(label='numSeats')
-    numAvial = forms.IntegerField(label='numAvial')
+    numAvail = forms.IntegerField(label='numAvail')
     FromCity = forms.CharField(label="location",  max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))
     ArivCity = forms.CharField(label="location",  max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
