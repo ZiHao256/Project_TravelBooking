@@ -1,4 +1,4 @@
-#!E:\5th_term\数据库系统\上机\大作业\TravelBookingSys\venv\Scripts\python.exe -x
+#!E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\venv\Scripts\python.exe -x
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==40.8.0','console_scripts','easy_install-3.6'
 __requires__ = 'setuptools==40.8.0'
 import re

@@ -1,4 +1,4 @@
-#!E:\5th_term\数据库系统\上机\大作业\TravelBookingSys\venv\Scripts\python.exe -x
+#!E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\venv\Scripts\python.exe -x
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip3.6'
 __requires__ = 'pip==19.0.3'
 import re

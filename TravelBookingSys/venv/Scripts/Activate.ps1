@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="E:\5th_term\数据库系统\上机\大作业\TravelBookingSys\venv"
+$env:VIRTUAL_ENV="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\venv"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

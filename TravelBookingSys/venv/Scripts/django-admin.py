@@ -1,4 +1,4 @@
-#!E:\5th_term\数据库系统\上机\大作业\TravelBookingSys\venv\Scripts\python.exe
+#!E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\venv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
