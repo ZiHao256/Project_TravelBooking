@@ -89,66 +89,98 @@ title: Document
 
 **注意：**数据库**一致性的条件之一**：表RESERVATIONS中所有预订该航班的条目数加上该航班的剩余座位数必须等于该航班上总的座位数。
 
-* `ADMIN(String adminName, int adminID)`
+* `ADMINS(String adminName, int adminID)`
 
-|  字段名   |  字段类型   | 是否可为空 | 默认值 | 字段含义 |  注释  |
-| :-------: | :---------: | :--------: | :----: | :------: | :----: |
-| adminName | VARCHAR(50) |  NOT NULL  |        | 管理员名 | 主键？ |
-|  adminID  |     INT     |  NOT NULL  |        | 管理员ID |        |
-|           |             |            |        |          |        |
+|  字段名   |  字段类型   | 是否可为空 | 默认值 | 字段含义 | 注释 |
+| :-------: | :---------: | :--------: | :----: | :------: | :--: |
+|  adminID  |     INT     |  NOT NULL  |        | 管理员ID | 主键 |
+| adminName | VARCHAR(50) |  NOT NULL  |        | 管理员名 |      |
+| password  | VARCHAR(50) |  NOT NULL  |        |   密码   |      |
+
+* `CUSTOMERS(String custName, int custID)；`
+
+|  字段名  |  字段类型   | 是否可为空 | 默认值 | 字段含义 |     注释     |
+| :------: | :---------: | :--------: | :----: | :------: | :----------: |
+|  custID  |     INT     |  NOT NULL  |        |  乘客ID  |     主键     |
+| custName | VARCHAR(50) |  NOT NULL  |        |  乘客名  |              |
+| password | VARCHAR(50) |  NOT NULL  |        |   密码   |              |
+| balance  |     INT     |  NOT NULL  |        |   余额   | 约束：大于零 |
 
 * `FLIGHTS (String flightNum, int price, int numSeats, int numAvail, String FromCity, String ArivCity)；`
 
-|  字段名   |  字段类型   | 是否可为空 | 默认值 |      字段含义      | 注释 |
-| :-------: | :---------: | :--------: | :----: | :----------------: | :--: |
-| flightNum | VARCHAR(50) |  NOT NULL  |        |      航班编码      | 主键 |
-|   price   |     INT     |  NOT NULL  |        |    每个座位价格    |      |
-| numSeats  |     INT     |  NOT NULL  |        |    总的座位数量    |      |
-| numAvail  |     INT     |  NOT NULL  |        | 剩余可预约座位数量 |      |
-| FromCity  | VARCHAR(50) |  NOT NULL  |        |       起飞地       |      |
-| ArivCity  | VARCHAR(50) |  NOT NULL  |        |       目的地       |      |
+|  字段名   |  字段类型   | 是否可为空 | 默认值 |      字段含义      |     注释     |
+| :-------: | :---------: | :--------: | :----: | :----------------: | :----------: |
+| flightNum | VARCHAR(50) |  NOT NULL  |        |      航班编码      |     主键     |
+|   price   |     INT     |  NOT NULL  |        |    每个座位价格    | 约束：大于零 |
+| numSeats  |     INT     |  NOT NULL  |        |    总的座位数量    |              |
+| numAvail  |     INT     |  NOT NULL  |        | 剩余可预约座位数量 |              |
+| FromCity  | VARCHAR(50) |  NOT NULL  |        |       起飞地       |              |
+| ArivCity  | VARCHAR(50) |  NOT NULL  |        |       目的地       |              |
 
 * `HOTELS(String location, int price, int numRooms, int numAvail)；`
 
 
-|  字段名  |  字段类型   | 是否可为空 | 默认值 |      字段含义      | 注释 |
-| :------: | :---------: | :--------: | :----: | :----------------: | :--: |
-| location | VARCHAR(50) |  NOT NULL  |        |       地方名       | 主键 |
-|  price   |     INT     |  NOT NULL  |        |    每个房间价格    |      |
-| numRooms |     INT     |  NOT NULL  |        |     总的房间数     |      |
-| numAvail |     INT     |  NOT NULL  |        | 剩余可预约房间数量 |      |
-|          |             |            |        |                    |      |
+|  字段名  |  字段类型   | 是否可为空 | 默认值 |      字段含义      |     注释     |
+| :------: | :---------: | :--------: | :----: | :----------------: | :----------: |
+| location | VARCHAR(50) |  NOT NULL  |        |       地方名       |  主键，外键  |
+|  price   |     INT     |  NOT NULL  |        |    每个房间价格    | 约束：大于零 |
+| numRooms |     INT     |  NOT NULL  |        |     总的房间数     |              |
+| numAvail |     INT     |  NOT NULL  |        | 剩余可预约房间数量 |              |
+|          |             |            |        |                    |              |
 
 
 * `BUS(String location, int price, int numBus, int numAvail)；`
 
-|  字段名  |  字段类型  | 是否可为空 | 默认值 |      字段含义       | 注释 |
-| :------: | :--------: | :--------: | :----: | :-----------------: | :--: |
-| location | VARCHA(50) |  NOT NULL  |        |       地方名        | 主键 |
-|  price   |    INT     |  NOT NULL  |        |   每次乘坐Bus价格   |      |
-|  numBus  |    INT     |  NOT NULL  |        |    总的Bus座位数    |      |
-| numAvail |    INT     |  NOT NULL  |        | 剩余可预约Bus座位数 |      |
-|          |            |            |        |                     |      |
-|          |            |            |        |                     |      |
-* `CUSTOMERS(String custName, int custID)；`
+|  字段名  |  字段类型  | 是否可为空 | 默认值 |      字段含义       |     注释     |
+| :------: | :--------: | :--------: | :----: | :-----------------: | :----------: |
+| location | VARCHA(50) |  NOT NULL  |        |       地方名        |  主键，外键  |
+|  price   |    INT     |  NOT NULL  |        |   每次乘坐Bus价格   | 约束：大于零 |
+| numSeats |    INT     |  NOT NULL  |        |    总的Bus座位数    |              |
+| numAvail |    INT     |  NOT NULL  |        | 剩余可预约Bus座位数 |              |
+|          |            |            |        |                     |              |
+|          |            |            |        |                     |              |
 
-|  字段名  |  字段类型   | 是否可为空 | 默认值 | 字段含义 |  注释  |
-| :------: | :---------: | :--------: | :----: | :------: | :----: |
-| custName | VARCHAR(50) |  NOT NULL  |        |  乘客名  | 主键？ |
-|  custID  |     INT     |  NOT NULL  |        |  乘客ID  |        |
-|          |             |            |        |          |        |
 
-* `RESERVATIONS(String custName, int resvType, String resvKey) `
+* `RES_FLIGHT(String custName, int resvType, String resvKey) `
 
-|    字段名     |  字段类型   | 是否可为空 | 默认值 |   字段含义   |                             注释                             |
-| :-----------: | :---------: | :--------: | :----: | :----------: | :----------------------------------------------------------: |
-|    resvKey    | VARCHAR(50) |  NOT NULL  |        | 预约条目编码 |                          主键，自增                          |
-|   custName    | VARCHAR(50) |  NOT NULL  |        |   乘客姓名   |                             外键                             |
-|   resvType    |     INT     |  NOT NULL  |        |   预约类型   | 预订的类型：<br />1为预订航班<br />2为预订宾馆房间<br />3为预订大巴车） |
-|   flightNum   |     INT     |    NULL    |        |   航班编码   |                             外键                             |
-| hotelLocation | VARCHAR(50) |    NULL    |        |   宾馆位置   |                             外键                             |
-|  busLocation  | VARCHAR(50) |    NULL    |        |   大巴位置   |                             外键                             |
-|               |             |            |        |              |                                                              |
+|  字段名   |  字段类型   | 是否可为空 | 默认值 |   字段含义   | 注释 |
+| :-------: | :---------: | :--------: | :----: | :----------: | :--: |
+|  resvKey  |     INT     |  NOT NULL  |        | 预约条目编码 | 主键 |
+|  custID   | VARCHAR(50) |  NOT NULL  |        |    乘客ID    | 外键 |
+| flightNum | VARCHAR(50) |  NOT NULL  |        |   航班编码   | 外键 |
+|           |             |            |        |              |      |
+
+
+
+* `RES_HOTEL(String custName, int resvType, String resvKey) `
+
+|    字段名     |  字段类型   | 是否可为空 | 默认值 |   字段含义   | 注释 |
+| :-----------: | :---------: | :--------: | :----: | :----------: | :--: |
+|    resvKey    |     INT     |  NOT NULL  |        | 预约条目编码 | 主键 |
+|    custID     | VARCHAR(50) |  NOT NULL  |        |    乘客ID    | 外键 |
+| hotelLocation | VARCHAR(50) |  NOT NULL  |        |   宾馆位置   | 外键 |
+|               |             |            |        |              |      |
+
+
+
+* `RES_BUS(String custName, int resvType, String resvKey) `
+
+|   字段名    |  字段类型   | 是否可为空 | 默认值 |   字段含义   | 注释 |
+| :---------: | :---------: | :--------: | :----: | :----------: | :--: |
+|   resvKey   |     INT     |  NOT NULL  |        | 预约条目编码 | 主键 |
+|   custID    | VARCHAR(50) |  NOT NULL  |        |    乘客ID    | 外键 |
+| busLocation | VARCHAR(50) |  NOT NULL  |        |   大巴位置   | 外键 |
+|             |             |            |        |              |      |
+
+
+
+* `LOCATION(String location)`
+
+|  字段名   |  字段类型   | 是否可为空 | 默认值 |   字段含义   |    注释    |
+| :-------: | :---------: | :--------: | :----: | :----------: | :--------: |
+| location  | VARCHAR(50) |  NOT NULL  |        |    地方名    |    主键    |
+| riskLevel | VARCHAR(50) |  NOT NULL  |        | 疫情风险等级 | 高、中、低 |
+
 
 
 
@@ -158,3 +190,97 @@ title: Document
 
 
 
+![实体类图](Document.assets/实体类图.jpg)
+
+
+
+# 业务逻辑
+
+## USER
+
+**注册**
+
+* [x] admin_register
+* [x] cust_register
+
+POST
+
+
+
+**登录**
+
+* [x] admin_login
+* [x] cust_login
+
+POST
+
+
+
+**登出**
+
+* [x] logout
+
+## CUSTOMER
+
+
+
+**预定 FLIGHT、HOTEL、BUS**
+
+* [ ] reserve_flight
+* [ ] reserve_hotel
+* [ ] reserve_bus
+
+
+
+**查看预定信息**
+
+* [ ] show_reservations
+
+
+
+**查看自己的旅游路线**
+
+* [ ] show_line
+
+**检查旅游路线完整性**
+
+* [ ] check_line
+
+
+
+## ADMIN
+
+**查看customers**/admins
+
+* [x] show_customers
+* [x] show_admins
+
+
+
+**管理LOCATION**
+
+* [x] add_location
+* [x] change_location
+* [x] delete_location
+* [x] show_location
+
+**管理FLIGHT**
+
+* [x] add_flight
+* [x] change_flight
+* [x] delete_flight
+* [x] show_flight
+
+**管理HOTEL**
+
+* [x] add_hotel
+* [x] change_hotel
+* [x] delete_hotel
+* [x] show_hotel
+
+**管理BUS**
+
+* [x] add_bus
+* [x] change_bus
+* [x] delete_bus
+* [x] show_bus

@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb83c780-3192-46c2-a2ff-cfa9a713488b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TravelBooking/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TravelBooking/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TravelBooking/views/administer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TravelBooking/views/customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TravelBooking/views/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TravelBooking/views/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Document/Document.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Document.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Document/详细设计/实体类图.eddx" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/详细设计/实体类图.eddx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TravelBookingSys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TravelBookingSys.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-3.2.9.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Django-3.2.9.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-40.8.0-py3.6.egg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-40.8.0-py3.6.egg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlparse-0.4.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlparse-0.4.2.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/django-admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/django-admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.6-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.6-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.6-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.6-script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/sqlformat.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/sqlformat.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBookingSys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBookingSys/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBookingSys/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBookingSys/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +44,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Scripts/python.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -67,6 +63,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="TravelBookingSys.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -100,6 +97,10 @@
       <workItem from="1638061619296" duration="183000" />
       <workItem from="1638061829334" duration="451000" />
       <workItem from="1638100320221" duration="635000" />
+      <workItem from="1638167025079" duration="1284000" />
+      <workItem from="1638169225792" duration="10470000" />
+      <workItem from="1638180822328" duration="1390000" />
+      <workItem from="1638182238702" duration="11313000" />
     </task>
     <servers />
   </component>
@@ -107,17 +108,48 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638062126237">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="1032" y="201" key="#Notifications" timestamp="1638182253139">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1032" y="201" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1638182253139" />
+    <state x="279" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638182552194">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1638062126237" />
-    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1638061948198">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="279" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1638182552194" />
+    <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1638176047053">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1638176047053" />
+    <state x="686" y="233" key="FileChooserDialogImpl" timestamp="1638180847893">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1638061948198" />
-    <state x="270" y="74" key="SettingsEditor" timestamp="1638062106040">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1638180847893" />
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1638194912861">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
+    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1638194912861">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
+    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1638194912861">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
+    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1638194912861">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1638194912861" />
+    <state x="649" y="226" key="SettingsEditor" timestamp="1638181587263">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="270" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1638062106040" />
+    <state x="649" y="226" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1638181587263" />
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1638189453890">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1638189453890" />
   </component>
 </project>
