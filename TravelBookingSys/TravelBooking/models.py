@@ -22,11 +22,11 @@ class CUSTOMERS(models.Model):
 
 
 class LOCATIONS(models.Model):
-    riskchoices = {
+    riskchoices = (
         (u'高', u'高'),
         (u'中', u'中'),
         (u'低', u'低')
-    }
+    )
     location = models.CharField(null=False, unique=True, max_length=50, primary_key=True)
     riskLevel = models.CharField(null=False, choices=riskchoices, max_length=50, default='低')
 
@@ -67,18 +67,47 @@ class BUS(models.Model):
 
 
 class RES_FLIGHT(models.Model):
-    resvKey = models.IntegerField(null=False, unique=True, primary_key=True)
+    statusChoice = (
+        ('正在预约', '正在预约'),
+        ('已预约', '已预约'),
+        ('订单已开始', '订单已开始'),
+        ('订单已完成', '订单已完成')
+    )
+    resvKey = models.AutoField(null=False, unique=True, primary_key=True, )
     custID = models.ForeignKey('CUSTOMERS', on_delete=models.CASCADE, null=False)
     flightNum = models.ForeignKey('FLIGHTS', on_delete=models.CASCADE, null=False)
-
+    resStatus = models.CharField(null=False, choices=statusChoice, max_length=50, default='正在预约')
+    buildTime = models.DateTimeField(null=True)
+    startTime = models.DateTimeField(null=True)
+    endTime = models.DateTimeField(null=True)
 
 class RES_HOTEL(models.Model):
-    resvKey = models.IntegerField(null=False, unique=True, primary_key=True)
+    statusChoice = (
+        ('正在预约', '正在预约'),
+        ('已预约', '已预约'),
+        ('订单已开始', '订单已开始'),
+        ('订单已完成', '订单已完成')
+    )
+    resvKey = models.AutoField(null=False, unique=True, primary_key=True)
     custID = models.ForeignKey('CUSTOMERS', on_delete=models.CASCADE, null=False)
     hotelLocation = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False)
+    resStatus = models.CharField(null=False, choices=statusChoice, max_length=50, default='正在预约')
+    buildTime = models.DateTimeField(null=True)
+    startTime = models.DateTimeField(null=True)
+    endTime = models.DateTimeField(null=True)
 
 
 class RES_BUS(models.Model):
-    resvKey = models.IntegerField(null=False, unique=True, primary_key=True)
+    statusChoice = (
+        ('正在预约', '正在预约'),
+        ('已预约', '已预约'),
+        ('订单已开始', '订单已开始'),
+        ('订单已完成', '订单已完成')
+    )
+    resvKey = models.AutoField(null=False, unique=True, primary_key=True)
     custID = models.ForeignKey('CUSTOMERS', on_delete=models.CASCADE, null=False)
     busLocation = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False)
+    resStatus = models.CharField(null=False, choices=statusChoice, max_length=50, default='正在预约')
+    buildTime = models.DateTimeField(null=True)
+    startTime = models.DateTimeField(null=True)
+    endTime = models.DateTimeField(null=True)

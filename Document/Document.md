@@ -148,7 +148,9 @@ title: Document
 |  resvKey  |     INT     |  NOT NULL  |        | 预约条目编码 | 主键 |
 |  custID   | VARCHAR(50) |  NOT NULL  |        |    乘客ID    | 外键 |
 | flightNum | VARCHAR(50) |  NOT NULL  |        |   航班编码   | 外键 |
-|           |             |            |        |              |      |
+| buildTime |  DATETIME   |    NULL    |        | 预约生成时间 |      |
+| startTime |  DATETIME   |    NULL    |        | 订单开始时间 |      |
+|  endTime  |  DATETIME   |    NULL    |        | 订单结束时间 |      |
 
 
 
@@ -158,8 +160,9 @@ title: Document
 | :-----------: | :---------: | :--------: | :----: | :----------: | :--: |
 |    resvKey    |     INT     |  NOT NULL  |        | 预约条目编码 | 主键 |
 |    custID     | VARCHAR(50) |  NOT NULL  |        |    乘客ID    | 外键 |
-| hotelLocation | VARCHAR(50) |  NOT NULL  |        |   宾馆位置   | 外键 |
-|               |             |            |        |              |      |
+| hotelLocation | VARCHAR(50) |  NOT NULL  |        |   宾馆位置   | 外键 | buildTime |  DATETIME   |    NULL    |        | 预约生成时间 |      |
+| startTime |  DATETIME   |    NULL    |        | 订单开始时间 |      |
+|  endTime  |  DATETIME   |    NULL    |        | 订单结束时间 |      |
 
 
 
@@ -170,7 +173,9 @@ title: Document
 |   resvKey   |     INT     |  NOT NULL  |        | 预约条目编码 | 主键 |
 |   custID    | VARCHAR(50) |  NOT NULL  |        |    乘客ID    | 外键 |
 | busLocation | VARCHAR(50) |  NOT NULL  |        |   大巴位置   | 外键 |
-|             |             |            |        |              |      |
+| buildTime |  DATETIME   |    NULL    |        | 预约生成时间 |      |
+| startTime |  DATETIME   |    NULL    |        | 订单开始时间 |      |
+|  endTime  |  DATETIME   |    NULL    |        | 订单结束时间 |      |
 
 
 
@@ -226,31 +231,51 @@ POST
 
 **预定 FLIGHT、HOTEL、BUS**
 
-* [ ] reserve_flight
-* [ ] reserve_hotel
-* [ ] reserve_bus
+* [x] reserve_flight
+
+* [x] reserve_hotel
+
+* [x] reserve_bus
+
+
+
+**开始FLIGHT, HOTEL, BUS**
+
+* [x] start_res_flight
+* [x] start_res_hotel
+* [x] start_res_bus
+
+
+
+**完成FLIGHT、HOTEL、BUS**
+
+* [x] end_res_flight
+* [x] end_res_hotel
+* [x] end_res_bus
 
 
 
 **查看预定信息**
 
-* [ ] show_reservations
+* [x] show_res_flight
+* [x] show_res_hotel
+* [x] show_res_bus
 
 
 
-**查看自己的旅游路线**
+**查看自己的旅游路线** and **检查旅游路线完整性**
 
-* [ ] show_line
+* [x] show_line
+  * [x] 展示某个flight预定开始的旅游路线和预定信息
 
-**检查旅游路线完整性**
 
-* [ ] check_line
+
 
 
 
 ## ADMIN
 
-**查看customers**/admins
+**查看customers/admins**
 
 * [x] show_customers
 * [x] show_admins

@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^show_customers$', show_customers),
     url(r'^show_admins$', show_admins),
     url(r'^add_location$', add_location),
-    url(r'^delete_location$',delete_location),
+    url(r'^delete_location$', delete_location),
     url(r'^show_location$', show_location),
     url(r'^change_location$', change_location),
 
@@ -34,4 +34,23 @@ urlpatterns = [
     url(r'^delete_hotel$', delete_hotel),
     url(r'^show_hotel$', show_hotel),
     url(r'^change_hotel$', change_hotel),
+
+    # CUSTOMER
+    url(r'^reserve_flight$', reserve_flight),
+    url(r'^start_res_flight$', start_res_flight),
+    url(r'^end_res_flight$', end_res_flight),
+    url(r'^show_res_flight$', show_res_flight),
+
+    url(r'^reserve_hotel$', reserve_hotel),
+    url(r'^start_res_hotel$', start_res_hotel),
+    url(r'^end_res_hotel$', end_res_hotel),
+    url(r'^show_res_hotel$', show_res_hotel),
+
+    url(r'^reserve_bus$', reserve_bus),
+    url(r'^start_res_bus$', start_res_bus),
+    url(r'^end_res_bus$', end_res_bus),
+    url(r'^show_res_bus$', show_res_bus),
+
+    ## line
+    url(r'^show_lines$', show_lines),
 ]
