@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb83c780-3192-46c2-a2ff-cfa9a713488b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/customer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/views/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBookingSys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBookingSys/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ProgramDesignComprehensive/TakeOut_2.0/Code" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -92,7 +90,8 @@
       <workItem from="1638169225792" duration="10470000" />
       <workItem from="1638180822328" duration="1390000" />
       <workItem from="1638182238702" duration="14889000" />
-      <workItem from="1638231577032" duration="19833000" />
+      <workItem from="1638231577032" duration="19978000" />
+      <workItem from="1638268036311" duration="633000" />
     </task>
     <servers />
   </component>
@@ -113,35 +112,35 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1638176047053" />
-    <state x="686" y="233" key="FileChooserDialogImpl" timestamp="1638180847893">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1638268153661">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1638061948198" />
+    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1638268153661" />
     <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1638180847893" />
-    <state width="1493" height="162" key="GridCell.Tab.0.bottom" timestamp="1638259201153">
+    <state width="1493" height="162" key="GridCell.Tab.0.bottom" timestamp="1638268673204">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="162" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1638259201153" />
+    <state width="1493" height="162" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1638268673204" />
     <state width="914" height="217" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
-    <state width="1493" height="162" key="GridCell.Tab.0.center" timestamp="1638259201153">
+    <state width="1493" height="162" key="GridCell.Tab.0.center" timestamp="1638268673204">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="162" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1638259201153" />
+    <state width="1493" height="162" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1638268673204" />
     <state width="914" height="217" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
-    <state width="1493" height="162" key="GridCell.Tab.0.left" timestamp="1638259201153">
+    <state width="1493" height="162" key="GridCell.Tab.0.left" timestamp="1638268673204">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="162" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1638259201153" />
+    <state width="1493" height="162" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1638268673204" />
     <state width="914" height="217" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
-    <state width="1493" height="162" key="GridCell.Tab.0.right" timestamp="1638259201153">
+    <state width="1493" height="162" key="GridCell.Tab.0.right" timestamp="1638268673204">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="162" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1638259201153" />
+    <state width="1493" height="162" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1638268673204" />
     <state width="914" height="217" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1638199116936" />
-    <state x="649" y="226" key="SettingsEditor" timestamp="1638181587263">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="270" y="74" key="SettingsEditor" timestamp="1638268634267">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="270" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1638062106040" />
+    <state x="270" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1638268634267" />
     <state x="649" y="226" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1638181587263" />
     <state x="882" y="192" width="672" height="543" key="search.everywhere.popup" timestamp="1638234838647">
       <screen x="0" y="0" width="1536" height="864" />
