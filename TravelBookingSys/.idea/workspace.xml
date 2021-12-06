@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb83c780-3192-46c2-a2ff-cfa9a713488b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Document/Document.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Document.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBookingSys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBookingSys/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,6 +36,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ProgramDesignComprehensive/TakeOut_2.0/Code" />
@@ -42,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_travelbooking\src\components" />
       <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\TravelBooking\views" />
     </key>
   </component>
@@ -92,6 +96,14 @@
       <workItem from="1638182238702" duration="14889000" />
       <workItem from="1638231577032" duration="19978000" />
       <workItem from="1638268036311" duration="633000" />
+      <workItem from="1638355664459" duration="1081000" />
+      <workItem from="1638360012140" duration="4338000" />
+      <workItem from="1638404595583" duration="652000" />
+      <workItem from="1638405271437" duration="9820000" />
+      <workItem from="1638444007475" duration="1387000" />
+      <workItem from="1638490087104" duration="65000" />
+      <workItem from="1638501647643" duration="164000" />
+      <workItem from="1638501852958" duration="383000" />
     </task>
     <servers />
   </component>
@@ -103,19 +115,19 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1032" y="201" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1638182253139" />
-    <state x="279" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638182552194">
+    <state x="519" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638355691245">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1638062126237" />
-    <state x="279" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1638182552194" />
-    <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1638176047053">
+    <state x="519" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1638355691245" />
+    <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1638369305971">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1638176047053" />
-    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1638268153661">
+    <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1638369305971" />
+    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1638501862602">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1638268153661" />
+    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1638501862602" />
     <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1638180847893" />
     <state width="1493" height="162" key="GridCell.Tab.0.bottom" timestamp="1638268673204">
       <screen x="0" y="0" width="1536" height="864" />
@@ -142,11 +154,11 @@
     </state>
     <state x="270" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1638268634267" />
     <state x="649" y="226" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1638181587263" />
-    <state x="882" y="192" width="672" height="543" key="search.everywhere.popup" timestamp="1638234838647">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1638368136471">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="882" y="192" width="672" height="543" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1638234838647" />
-    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1638189453890" />
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1638368136471" />
     <state x="491" y="343" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1638258215786">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
