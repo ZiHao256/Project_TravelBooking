@@ -211,3 +211,6 @@ element-ui table：自动遍历list并渲染
 
 
 # 美化
+
+* elementui图片走马灯
+* [(84条消息) vue+elementUI框架 实现走马灯图片高度自适应_weixin_45115895的博客-CSDN博客_elementui 走马灯高度](https://blog.csdn.net/weixin_45115895/article/details/108792741?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-1.highlightwordscore&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-1.highlightwordscore)
