@@ -14,7 +14,13 @@ urlpatterns = [
 
     # ADMIN
     url(r'^show_customers$', show_customers),
+    url(r'^change_customer$', change_customer),
+    url(r'^delete_customer$', delete_customer),
     url(r'^show_admins$', show_admins),
+    url(r'^change_admin$', change_admin),
+    url(r'^delete_admin$', delete_admin),
+    url(r'^change_admin^', change_admin),
+    url(r'^delete_admin^', delete_admin),
     url(r'^add_location$', add_location),
     url(r'^delete_location$', delete_location),
     url(r'^show_location$', show_location),

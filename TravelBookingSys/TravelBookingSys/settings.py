@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'TravelBooking.apps.TravelbookingConfig',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://127.0.0.1:8000',
+    'http://localhost:4000', #凡是出现在白名单中的域名，都可以访问后端接口
+)
+
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
 # session 配置
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # 引擎（默认）
@@ -70,8 +79,8 @@ ROOT_URLCONF = 'TravelBookingSys.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': ['vue_project/vue_travelbooking/dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,6 +91,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATIC_URL = '/static'
+STATICFILES_DIRS = [
+ os.path.join(BASE_DIR, 'vue_project/vue_travelbooking/dist/static')
 ]
 
 WSGI_APPLICATION = 'TravelBookingSys.wsgi.application'

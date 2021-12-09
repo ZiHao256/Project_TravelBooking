@@ -50,6 +50,51 @@ def show_customers(request):
     return JsonResponse(response)
 
 
+@csrf_exempt
+@require_http_methods(['POST'])
+def change_customer(request):
+    response = {}
+    try:
+        cust_form = CustChangeForm(request.POST)
+        if cust_form.is_valid():
+            custID = cust_form.cleaned_data['custID']
+            try:
+                cust = CUSTOMERS.objects.get(custID=custID)
+                cust.custName = cust_form.cleaned_data['custName']
+                cust.password = cust_form.cleaned_data['password']
+                cust.balance = cust_form.cleaned_data['balance']
+                cust.save()
+                response['msg'] = 'successfully'
+                response['error_num'] = 0
+            except Exception as e:
+                response['msg'] = 'cust does not exsited'
+                response['error_num'] = 1
+        else:
+            response['msg'] = 'form is not valid'
+            response['error_num'] = 2
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 3
+    return JsonResponse(response)
+
+
+@csrf_exempt
+@require_http_methods(['GET'])
+def delete_customer(request):
+    response = {}
+    try:
+        custID = request.GET.get('custID')
+        cust = CUSTOMERS.objects.get(custID=custID)
+        cust.delete()
+        response['msg'] = 'delete location successfully'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
+    return JsonResponse(response)
+
+
 @require_http_methods(["GET"])
 def show_admins(request):
     response = {}
@@ -81,6 +126,50 @@ def show_admins(request):
         else:
             response['msg'] = str(e)
             response['error_num'] = 1
+    return JsonResponse(response)
+
+
+@csrf_exempt
+@require_http_methods(['POST'])
+def change_admin(request):
+    response = {}
+    try:
+        admin_form = AdminChangeForm(request.POST)
+        if admin_form.is_valid():
+            adminID = admin_form.cleaned_data['adminID']
+            try:
+                admin = ADMINS.objects.get(adminID=adminID)
+                admin.adminName = admin_form.cleaned_data['adminName']
+                admin.password = admin_form.cleaned_data['password']
+                admin.save()
+                response['msg'] = 'successfully'
+                response['error_num'] = 0
+            except Exception as e:
+                response['msg'] = 'cust does not exsited'
+                response['error_num'] = 1
+        else:
+            response['msg'] = 'form is not valid'
+            response['error_num'] = 2
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 3
+    return JsonResponse(response)
+
+
+@csrf_exempt
+@require_http_methods(['GET'])
+def delete_admin(request):
+    response = {}
+    try:
+        adminID = request.GET.get('adminID')
+        admin = ADMINS.objects.get(adminID=adminID)
+        admin.delete()
+        response['msg'] = 'delete location successfully'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
     return JsonResponse(response)
 
 
@@ -116,12 +205,12 @@ def add_location(request):
 
 
 @csrf_exempt
-@require_http_methods(['DELETE'])
+@require_http_methods(['GET'])
 def delete_location(request):
     response = {}
     try:
-        DELETE = QueryDict(request.body)
-        loc_name = DELETE.get('location')
+        print(request.GET.get('location'))
+        loc_name = request.GET.get('location')
         print(loc_name)
         location = LOCATIONS.objects.get(location=loc_name)
         location.delete()
@@ -232,12 +321,12 @@ def add_flight(request):
 
 
 @csrf_exempt
-@require_http_methods(['DELETE'])
+@require_http_methods(['GET'])
 def delete_flight(request):
     response = {}
     try:
-        DELETE = QueryDict(request.body)
-        flightNum = DELETE.get('flightNum')
+
+        flightNum = request.GET.get('flightNum')
         flight = FLIGHTS.objects.get(flightNum=flightNum)
         flight.delete()
         response['msg'] = 'delete flight successfully'
@@ -349,12 +438,11 @@ def add_hotel(request):
 
 
 @csrf_exempt
-@require_http_methods(['DELETE'])
+@require_http_methods(['GET'])
 def delete_hotel(request):
     response = {}
     try:
-        DELETE = QueryDict(request.body)
-        hotel_loc = DELETE.get('location')
+        hotel_loc = request.GET.get('location')
 
         hotel = HOTELS.objects.get(location=hotel_loc)
         hotel.delete()
@@ -466,12 +554,11 @@ def add_bus(request):
 
 
 @csrf_exempt
-@require_http_methods(['DELETE'])
+@require_http_methods(['GET'])
 def delete_bus(request):
     response = {}
     try:
-        DELETE = QueryDict(request.body)
-        bus_loc = DELETE.get('location')
+        bus_loc = request.GET.get('location')
         print(bus_loc)
         bus = BUS.objects.get(location=bus_loc)
         bus.delete()

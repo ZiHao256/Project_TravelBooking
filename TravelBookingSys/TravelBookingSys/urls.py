@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 import TravelBooking.views.urls
+from TravelBooking.views.user import login
 
 urlpatterns = [
-    #path('^administer.py/', administer.py.site.urls),
+    # path('^administer.py/', administer.py.site.urls),
+    path(r'', login),
     url(r'^api/', include(TravelBooking.views.urls)),
 ]

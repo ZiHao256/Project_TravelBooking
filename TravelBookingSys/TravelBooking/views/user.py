@@ -11,6 +11,10 @@ from TravelBooking.models import ADMINS, CUSTOMERS
 def object_to_json(obj):
     return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
 
+# USER
+def login(request):
+    return render(request, 'index.html')
+
 
 @csrf_exempt
 @require_http_methods("POST")
@@ -25,6 +29,7 @@ def admin_login(request):
     if request.method == 'POST':
         login_form = AdminLoginForm(request.POST)
         response['msg'] = 'please check '
+        response['error_num'] = 1
 
         if login_form.is_valid():
             adminID = login_form.cleaned_data['adminID']
@@ -45,7 +50,9 @@ def admin_login(request):
             except Exception as e:
                 response['msg'] = str(e)
                 response['error_num'] = 3
-
+        else:
+            response['msg'] = 'form is not valid'
+            response['error_num'] = 1
         return JsonResponse(response)
 
     return JsonResponse(response)
@@ -96,6 +103,7 @@ def admin_register(request):
     response = {}
 
     if request.method == "POST":
+        print(request.POST)
         register_form = AdminRegisterForm(request.POST)
         response['msg'] = 'please check content!'
         response['error_num'] = 1
@@ -104,7 +112,7 @@ def admin_register(request):
             adminID = register_form.cleaned_data['adminID']
             password1 = register_form.cleaned_data['password1']
             password2 = register_form.cleaned_data['password2']
-            name = register_form.cleaned_data['name']
+            name = register_form.cleaned_data['adminName']
             if password1 != password2:
                 response['msg'] = 'password is not consistent！'
                 return JsonResponse(response)
@@ -138,7 +146,7 @@ def admin_register(request):
 @require_http_methods("POST")
 def cust_register(request):
     response = {}
-
+    print(request.POST)
     if request.method == "POST":
         register_form = CustRegisterForm(request.POST)
         response['msg'] = 'please check content!'
@@ -148,7 +156,7 @@ def cust_register(request):
             custID = register_form.cleaned_data['custID']
             password1 = register_form.cleaned_data['password1']
             password2 = register_form.cleaned_data['password2']
-            name = register_form.cleaned_data['name']
+            name = register_form.cleaned_data['custName']
             if password1 != password2:
                 response['msg'] = 'password is not consistent！'
                 return JsonResponse(response)

@@ -29,7 +29,7 @@ def reserve_flight(request):
     try:
         res_flight_form = RES_FLIGHT_Form(request.POST)
         if res_flight_form.is_valid():
-            custID = request.session['custID']
+            custID = request.session.get('custID')
             flightNum = res_flight_form.cleaned_data['flightNum']
             res_flight = RES_FLIGHT(
                 custID=CUSTOMERS.objects.get(custID=custID),
@@ -126,6 +126,7 @@ def reserve_bus(request):
 @require_http_methods(['GET'])
 def show_res_flight(request):
     response = {}
+    print(request.session.get('custID'))
     try:
         if request.GET.get('resvKey') is not None:
             res_flight = RES_FLIGHT.objects.get(resvKey=request.GET.get('resvKey'))
@@ -221,23 +222,28 @@ def show_res_bus(request):
 @require_http_methods(['POST'])
 def start_res_flight(request):
     response = {}
+    print(request.POST)
     try:
         res_flight_form = RES_FLIGHT_Form(request.POST)
         response['msg'] = 'check'
         if res_flight_form.is_valid():
             res_flight = RES_FLIGHT.objects.get(resvKey=res_flight_form.cleaned_data['resvKey'])
-            res_flight.resStatus = '订单已开始'
-            res_flight.startTime = datetime.now()
-            res_flight.save()
+            if res_flight.resStatus == '已预约':
+                res_flight.resStatus = '订单已开始'
+                res_flight.startTime = datetime.now()
+                res_flight.save()
 
-            res_key = res_flight.resvKey
-            res_flightNum = res_flight.flightNum_id
-            res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
-            res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
+                res_key = res_flight.resvKey
+                res_flightNum = res_flight.flightNum_id
+                res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
+                res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
 
-            response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
-                res_from) + ' to ' + str(res_to) + ' 开始'
-            response['error_num'] = 0
+                response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
+                    res_from) + ' to ' + str(res_to) + ' 开始'
+                response['error_num'] = 0
+            else:
+                response['msg'] == '当前订单不是已预约'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 1
@@ -257,11 +263,15 @@ def start_res_hotel(request):
         response['msg'] = 'check'
         if res_hotel_form.is_valid():
             res_hotel = RES_HOTEL.objects.get(resvKey=res_hotel_form.cleaned_data['resvKey'])
-            res_hotel.resStatus = '订单已开始'
-            res_hotel.startTime = datetime.now()
-            res_hotel.save()
-            response['msg'] = 'res_hotel starts successfully'
-            response['error_num'] = 0
+            if res_hotel.resStatus == '已预约':
+                res_hotel.resStatus = '订单已开始'
+                res_hotel.startTime = datetime.now()
+                res_hotel.save()
+                response['msg'] = 'res_hotel starts successfully'
+                response['error_num'] = 0
+            else:
+                response['msg'] = '该订单不是已预约'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 1
@@ -281,14 +291,18 @@ def start_res_bus(request):
         response['msg'] = 'check'
         if res_bus_form.is_valid():
             res_bus = RES_BUS.objects.get(resvKey=res_bus_form.cleaned_data['resvKey'])
-            res_bus.resStatus = '订单已开始'
-            res_bus.startTime = datetime.now()
-            res_bus.save()
+            if res_bus.resStatus == '已预约':
+                res_bus.resStatus = '订单已开始'
+                res_bus.startTime = datetime.now()
+                res_bus.save()
 
-            res_bus_resKey = res_bus.resvKey
-            res_bus_loc = res_bus.busLocation_id
-            response['msg'] = '预约 ' + str(res_bus_resKey) + ' bus to ' + str(res_bus_loc) + ' starts successfully'
-            response['error_num'] = 0
+                res_bus_resKey = res_bus.resvKey
+                res_bus_loc = res_bus.busLocation_id
+                response['msg'] = '预约 ' + str(res_bus_resKey) + ' bus to ' + str(res_bus_loc) + ' starts successfully'
+                response['error_num'] = 0
+            else:
+                response['msg'] = '该订单不是已预约'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 1
@@ -308,18 +322,22 @@ def end_res_flight(request):
         res_flight_form = RES_FLIGHT_Form(request.POST)
         if res_flight_form.is_valid():
             res_flight = RES_FLIGHT.objects.get(resvKey=res_flight_form.cleaned_data['resvKey'])
-            res_flight.endTime = datetime.now()
-            res_flight.resStatus = '订单已完成'
-            res_flight.save()
+            if res_flight.resStatus == '订单已开始':
+                res_flight.endTime = datetime.now()
+                res_flight.resStatus = '订单已完成'
+                res_flight.save()
 
-            res_key = res_flight.resvKey
-            res_flightNum = res_flight.flightNum_id
-            res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
-            res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
+                res_key = res_flight.resvKey
+                res_flightNum = res_flight.flightNum_id
+                res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
+                res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
 
-            response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
-                res_from) + ' to ' + str(res_to) + ' 完成'
-            response['error_num'] = 0
+                response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
+                    res_from) + ' to ' + str(res_to) + ' 完成'
+                response['error_num'] = 0
+            else:
+                response['msg'] = '当前订单不是已开始'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 1
@@ -338,13 +356,17 @@ def end_res_hotel(request):
         res_hotel_form = RES_HOTEL_Form(request.POST)
         if res_hotel_form.is_valid():
             res_hotel = RES_HOTEL.objects.get(resvKey=res_hotel_form.cleaned_data['resvKey'])
-            res_hotel.endTime = datetime.now()
-            res_hotel.resStatus = '订单已完成'
-            res_hotel.save()
+            if res_hotel.resStatus == '订单已开始':
+                res_hotel.endTime = datetime.now()
+                res_hotel.resStatus = '订单已完成'
+                res_hotel.save()
 
-            resvKey = res_hotel.resvKey
-            response['msg'] = 'res_hotel ' + str(resvKey) + ' ends successfully'
-            response['error_num'] = 0
+                resvKey = res_hotel.resvKey
+                response['msg'] = 'res_hotel ' + str(resvKey) + ' ends successfully'
+                response['error_num'] = 0
+            else:
+                response['msg'] = '当前订单不是已开始'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 1
@@ -363,14 +385,18 @@ def end_res_bus(request):
         res_bus_form = RES_BUS_Form(request.POST)
         if res_bus_form.is_valid():
             res_bus = RES_BUS.objects.get(resvKey=res_bus_form.cleaned_data['resvKey'])
-            res_bus.endTime = datetime.now()
-            res_bus.resStatus = '订单已完成'
-            res_bus.save()
+            if res_bus.resStatus == '订单已开始':
+                res_bus.endTime = datetime.now()
+                res_bus.resStatus = '订单已完成'
+                res_bus.save()
 
-            resvKey = res_bus.resvKey
-            resv_loc = res_bus.busLocation_id
-            response['msg'] = '预定 ' + str(resvKey) + ' bus to ' + str(resv_loc) + ' ends successfully'
-            response['error_num'] = 0
+                resvKey = res_bus.resvKey
+                resv_loc = res_bus.busLocation_id
+                response['msg'] = '预定 ' + str(resvKey) + ' bus to ' + str(resv_loc) + ' ends successfully'
+                response['error_num'] = 0
+            else:
+                response['msg'] = '当前订单不是已开始'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 1
