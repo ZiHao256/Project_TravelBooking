@@ -17,6 +17,25 @@ def object_to_json(obj):
     return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
 
 
+@csrf_exempt
+@require_http_methods(['GET'])
+def deposit(request):
+    response = {}
+    try:
+        custID = request.session.get('custID')
+        customer = CUSTOMERS.objects.get(custID=custID)
+        print(request.GET.get('balance'))
+        print(type(request.GET.get('balance')))
+        customer.balance += int(request.GET.get('balance'))
+        customer.save()
+        response['msg'] = '充值成功'
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
+    return JsonResponse(response)
+
+
 # 预定FLIGHT, BUS, HOTEL
 @csrf_exempt
 @require_http_methods(['POST'])
@@ -31,20 +50,37 @@ def reserve_flight(request):
         if res_flight_form.is_valid():
             custID = request.session.get('custID')
             flightNum = res_flight_form.cleaned_data['flightNum']
-            res_flight = RES_FLIGHT(
-                custID=CUSTOMERS.objects.get(custID=custID),
-                flightNum=FLIGHTS.objects.get(flightNum=flightNum),
-                resStatus='已预约',
-                buildTime=datetime.now()
-            )
-            res_flight.save()
-            res_key = res_flight.resvKey
-            res_flightNum = res_flight.flightNum_id
-            res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
-            res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
-            response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
-                res_from) + ' to ' + str(res_to) + ' 成功'
-            response['error_num'] = 0
+            flight = FLIGHTS.objects.get(flightNum=flightNum)
+            customer = CUSTOMERS.objects.get(custID=request.session.get('custID'))
+            # 剩余座位是否足够
+            if flight.numAvail > 0:
+                flight.numAvail -= 1
+                # 余额是否足够
+                if customer.balance - flight.price >= 0:
+                    customer.balance -= flight.price
+                    res_flight = RES_FLIGHT(
+                        custID=CUSTOMERS.objects.get(custID=custID),
+                        flightNum=FLIGHTS.objects.get(flightNum=flightNum),
+                        resStatus='已预约',
+                        buildTime=datetime.now()
+                    )
+                    res_flight.save()
+                    flight.save()
+                    customer.save()
+
+                    res_key = res_flight.resvKey
+                    res_flightNum = res_flight.flightNum_id
+                    res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
+                    res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
+                    response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
+                        res_from) + ' to ' + str(res_to) + ' 成功'
+                    response['error_num'] = 0
+                else:
+                    response['msg'] = '余额不足！'
+                    response['error_num'] = 1
+            else:
+                response['msg'] = '座位已满！'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 0
@@ -68,18 +104,34 @@ def reserve_hotel(request):
         if res_hotel_form.is_valid():
             custID = request.session['custID']
             hotel_loc = res_hotel_form.cleaned_data['hotelLocation']
-            res_hotel = RES_HOTEL(
-                custID=CUSTOMERS.objects.get(custID=custID),
-                hotelLocation=LOCATIONS.objects.get(location=hotel_loc),
-                resStatus='已预约',
-                buildTime=datetime.now()
-            )
-            res_hotel.save()
-            response['msg'] = '预约 hotel 成功'
-            response['error_num'] = 0
+            hotel = HOTELS.objects.get(location=hotel_loc)
+            customer = CUSTOMERS.objects.get(custID=custID)
+            # 剩余房间是否足够
+            if hotel.numAvail > 0:
+                hotel.numAvail -= 1
+                # 余额是否足够
+                if customer.balance-hotel.price >0:
+                    customer.balance -= hotel.price
+                    res_hotel = RES_HOTEL(
+                        custID=CUSTOMERS.objects.get(custID=custID),
+                        hotelLocation=LOCATIONS.objects.get(location=hotel_loc),
+                        resStatus='已预约',
+                        buildTime=datetime.now()
+                    )
+                    customer.save()
+                    hotel.save()
+                    res_hotel.save()
+                    response['msg'] = '预约 hotel 成功'
+                    response['error_num'] = 0
+                else:
+                    response['msg'] = '余额不足'
+                    response['error_num'] = 1
+            else:
+                response['msg'] = '座位已满'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
-            response['error_num'] = 0
+            response['error_num'] = 1
             JsonResponse(response)
     except Exception as e:
         response['msg'] = str(e)
@@ -100,18 +152,32 @@ def reserve_bus(request):
         if res_bus_form.is_valid():
             custID = request.session['custID']
             bus_loc = res_bus_form.cleaned_data['busLocation']
-            res_bus = RES_BUS(
-                custID=CUSTOMERS.objects.get(custID=custID),
-                busLocation=LOCATIONS.objects.get(location=bus_loc),
-                resStatus='已预约',
-                buildTime=datetime.now()
-            )
-            res_bus.save()
 
-            resKey = res_bus.resvKey
-            res_loc = res_bus.busLocation_id
-            response['msg'] = '预约 ' + str(resKey) + ' bus to ' + str(res_loc) + ' 成功'
-            response['error_num'] = 0
+            bus = BUS.objects.get(location=bus_loc)
+            customer = CUSTOMERS.objects.get(custID=custID)
+            if bus.numAvail > 0:
+                bus.numAvail -= 1
+                if customer.balance - bus.price > 0:
+                    customer.balance -= bus.price
+                    res_bus = RES_BUS(
+                        custID=CUSTOMERS.objects.get(custID=custID),
+                        busLocation=LOCATIONS.objects.get(location=bus_loc),
+                        resStatus='已预约',
+                        buildTime=datetime.now()
+                    )
+                    bus.save()
+                    customer.save()
+                    res_bus.save()
+                    resKey = res_bus.resvKey
+                    res_loc = res_bus.busLocation_id
+                    response['msg'] = '预约 ' + str(resKey) + ' bus to ' + str(res_loc) + ' 成功'
+                    response['error_num'] = 0
+                else:
+                    response['msg'] = '余额不足'
+                    response['error_num'] = 1
+            else:
+                response['msg'] = '座位已满'
+                response['error_num'] = 1
         else:
             response['msg'] = 'form is not valid'
             response['error_num'] = 0
@@ -325,13 +391,17 @@ def end_res_flight(request):
             if res_flight.resStatus == '订单已开始':
                 res_flight.endTime = datetime.now()
                 res_flight.resStatus = '订单已完成'
+
+                flight = FLIGHTS.objects.get(flightNum=res_flight.flightNum_id)
+                flight.numAvail += 1
+
+                flight.save()
                 res_flight.save()
 
                 res_key = res_flight.resvKey
                 res_flightNum = res_flight.flightNum_id
                 res_from = FLIGHTS.objects.get(flightNum=res_flightNum).FromCity_id
                 res_to = FLIGHTS.objects.get(flightNum=res_flightNum).ArivCity_id
-
                 response['msg'] = '预约 ' + str(res_key) + ' flight(' + str(res_flightNum) + ') from ' + str(
                     res_from) + ' to ' + str(res_to) + ' 完成'
                 response['error_num'] = 0
@@ -359,6 +429,11 @@ def end_res_hotel(request):
             if res_hotel.resStatus == '订单已开始':
                 res_hotel.endTime = datetime.now()
                 res_hotel.resStatus = '订单已完成'
+
+                hotel = HOTELS.objects.get(location=res_hotel.hotelLocation_id)
+                hotel.numAvail += 1
+
+                hotel.save()
                 res_hotel.save()
 
                 resvKey = res_hotel.resvKey
@@ -388,6 +463,11 @@ def end_res_bus(request):
             if res_bus.resStatus == '订单已开始':
                 res_bus.endTime = datetime.now()
                 res_bus.resStatus = '订单已完成'
+
+                bus = BUS.objects.get(location=res_bus.busLocation_id)
+                bus.numAvail += 1
+
+                bus.save()
                 res_bus.save()
 
                 resvKey = res_bus.resvKey
@@ -418,11 +498,11 @@ def show_lines(request):
             custID = request.session.get('custID')
             res_flights = RES_FLIGHT.objects.filter(Q(custID=custID) and Q(resvKey__gte=resvKey))
 
-            complete_line_list = []     #完整的路线
-            incomplete_line_list = []   #不完整的路线
+            complete_line_list = []  # 完整的路线
+            incomplete_line_list = []  # 不完整的路线
             line = []  # 旅游路线
             result = []
-            count = 1   # 记录已加入路线的res个数
+            count = 1  # 记录已加入路线的res个数
 
             line.append(str(FLIGHTS.objects.get(flightNum=res_flights[0].flightNum_id).FromCity_id))
             line.append(str(FLIGHTS.objects.get(flightNum=res_flights[0].flightNum_id).ArivCity_id))
@@ -434,11 +514,10 @@ def show_lines(request):
                     line.append(flight.ArivCity_id)
                     result.append(i)
 
-            if line[len(line)-1] == line[0]:
+            if line[len(line) - 1] == line[0]:
                 is_complete = 1
             else:
                 is_complete = 0
-
 
             listall = json.loads(serializers.serialize("json", result))
             total = int(len(listall))

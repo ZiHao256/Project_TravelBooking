@@ -9,13 +9,23 @@
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery/4.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery/5.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/观光塔.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Document/Document.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Document.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Document/vue项目实例学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/vue项目实例学习.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/views/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TravelBooking/views/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Customer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Customer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/bus.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/bus.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/customer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/customer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/flight.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/flight.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/hotel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/hotel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/location.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/location.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/busList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/busList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/flightList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/flightList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/hotelList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/hotelList.vue" afterDir="false" />
@@ -73,7 +83,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ProgramDesignComprehensive/TakeOut_2.0/Code" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -151,7 +161,11 @@
       <workItem from="1638976214547" duration="932000" />
       <workItem from="1638977693017" duration="1405000" />
       <workItem from="1639010029608" duration="13830000" />
-      <workItem from="1639031227517" duration="7035000" />
+      <workItem from="1639031227517" duration="8462000" />
+      <workItem from="1639039806391" duration="6125000" />
+      <workItem from="1639051203633" duration="8416000" />
+      <workItem from="1639060386191" duration="915000" />
+      <workItem from="1639061320860" duration="1341000" />
     </task>
     <servers />
   </component>
@@ -172,40 +186,40 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1638369305971" />
-    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1639033577676">
+    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1639056052436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1639033577676" />
+    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1639056052436" />
     <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1638975911413" />
-    <state width="1493" height="92" key="GridCell.Tab.0.bottom" timestamp="1639033551873">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1877" height="190" key="GridCell.Tab.0.bottom" timestamp="1639062069789">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1493" height="92" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639033551873" />
-    <state width="1877" height="203" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1638977153637" />
-    <state width="1493" height="92" key="GridCell.Tab.0.center" timestamp="1639033551873">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="723" height="141" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
+    <state width="1877" height="190" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
+    <state width="1877" height="190" key="GridCell.Tab.0.center" timestamp="1639062069789">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1493" height="92" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639033551873" />
-    <state width="1877" height="203" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1638977153637" />
-    <state width="1493" height="92" key="GridCell.Tab.0.left" timestamp="1639033551872">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="723" height="141" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
+    <state width="1877" height="190" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
+    <state width="1877" height="190" key="GridCell.Tab.0.left" timestamp="1639062069789">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1493" height="92" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639033551872" />
-    <state width="1877" height="203" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1638977153637" />
-    <state width="1493" height="92" key="GridCell.Tab.0.right" timestamp="1639033551873">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="723" height="141" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
+    <state width="1877" height="190" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
+    <state width="1877" height="190" key="GridCell.Tab.0.right" timestamp="1639062069789">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1493" height="92" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639033551873" />
-    <state width="1877" height="203" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1638977153637" />
+    <state width="723" height="141" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
+    <state width="1877" height="190" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
     <state x="270" y="74" key="SettingsEditor" timestamp="1638268634267">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="270" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1638268634267" />
     <state x="649" y="226" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1638181587263" />
-    <state x="882" y="192" width="672" height="543" key="search.everywhere.popup" timestamp="1639037563742">
+    <state x="882" y="192" width="672" height="543" key="search.everywhere.popup" timestamp="1639052657041">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="882" y="192" width="672" height="543" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1639037563742" />
+    <state x="882" y="192" width="672" height="543" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1639052657041" />
     <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1638958801601" />
     <state x="491" y="343" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1638258215786">
       <screen x="0" y="0" width="1536" height="864" />

@@ -11,6 +11,7 @@ from TravelBooking.models import ADMINS, CUSTOMERS
 def object_to_json(obj):
     return dict([(kk, obj.__dict__[kk]) for kk in obj.__dict__.keys() if kk != "_state"])
 
+
 # USER
 def login(request):
     return render(request, 'index.html')
@@ -20,7 +21,7 @@ def login(request):
 @require_http_methods("POST")
 def admin_login(request):
     response = {}
-    if request.session.get('is_login', None):
+    if request.session.get('is_login', None) and request.session.get('adminID') == request.POST.get('adminID'):
         response['msg'] = 'this administer.py has logined'
         response['error_num'] = 1
         response['adminID'] = request.session.get('adminID')
@@ -62,10 +63,10 @@ def admin_login(request):
 @require_http_methods("POST")
 def cust_login(request):
     response = {}
-    if request.session.get('is_login', None):
+    if request.session.get('is_login', None) and request.session.get('custID') == request.POST.get('custID'):
         response['msg'] = 'this customer has logined'
         response['error_num'] = 1
-        response['custID'] = request.session.get('csutID')
+        response['custID'] = request.session.get('custID')
         return JsonResponse(response)
 
     if request.method == 'POST':

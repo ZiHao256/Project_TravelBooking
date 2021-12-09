@@ -42,6 +42,8 @@ urlpatterns = [
     url(r'^change_hotel$', change_hotel),
 
     # CUSTOMER
+    url(r'^deposit$', deposit),
+
     url(r'^reserve_flight$', reserve_flight),
     url(r'^start_res_flight$', start_res_flight),
     url(r'^end_res_flight$', end_res_flight),
