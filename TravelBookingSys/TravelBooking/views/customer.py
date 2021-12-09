@@ -209,6 +209,7 @@ def show_res_flight(request):
                 pagesize = total
             sort_ls = [listall[i:i + pagesize] for i in range(0, len(listall), pagesize)]
             response['list'] = sort_ls[pagenum - 1]
+            response['total'] = total
         response['error_num'] = 0
         response['msg'] = 'success'
     except Exception as e:
@@ -240,6 +241,7 @@ def show_res_hotel(request):
                 pagesize = total
             sort_ls = [listall[i:i + pagesize] for i in range(0, len(listall), pagesize)]
             response['list'] = sort_ls[pagenum - 1]
+            response['total'] = total
         response['error_num'] = 0
         response['msg'] = 'success'
     except Exception as e:
@@ -271,6 +273,7 @@ def show_res_bus(request):
                 pagesize = total
             sort_ls = [listall[i:i + pagesize] for i in range(0, len(listall), pagesize)]
             response['list'] = sort_ls[pagenum - 1]
+            response['total'] = total
         response['error_num'] = 0
         response['msg'] = 'success'
     except Exception as e:

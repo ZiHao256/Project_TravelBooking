@@ -232,9 +232,10 @@ POST
 **预定 FLIGHT、HOTEL、BUS**
 
 * [x] reserve_flight
+  * [x] 先判断av是否大于 0
+  * [x] 若大于零则 flight -1 ，保存flight
 
 * [x] reserve_hotel
-
 * [x] reserve_bus
 
 

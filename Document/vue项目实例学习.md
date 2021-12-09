@@ -199,8 +199,11 @@ element-ui table：自动遍历list并渲染
   * Django:  http://127.0.0.1:8000
   * vue ui: http://127.0.0.1:4040
   * Vue: http://127.0.0.1:4000
+  
 * 前端和后端 跨域问题：只需要配置一下后端
   * [Django+Vue跨域配置与经验 - kingkongk - 博客园 (cnblogs.com)](https://www.cnblogs.com/kingkongk/p/12982219.html)
+  
+* login 页面传递参数[关于Vue中两个vue页面传数据 - chalkbox - 博客园 (cnblogs.com)](https://www.cnblogs.com/chalkbox/p/12549437.html)
 
 
 
@@ -214,3 +217,5 @@ element-ui table：自动遍历list并渲染
 
 * elementui图片走马灯
 * [(84条消息) vue+elementUI框架 实现走马灯图片高度自适应_weixin_45115895的博客-CSDN博客_elementui 走马灯高度](https://blog.csdn.net/weixin_45115895/article/details/108792741?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-1.highlightwordscore&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-1.highlightwordscore)
+* 加过滤器
+* 加分页：el-pagination

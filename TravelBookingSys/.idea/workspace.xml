@@ -13,8 +13,6 @@
       <change beforePath="$PROJECT_DIR$/../Document/vue项目实例学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/vue项目实例学习.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TravelBooking/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/customer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/views/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/views/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Customer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/Customer.vue" afterDir="false" />
@@ -66,7 +64,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/vue_project/vue_travelbooking" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="21VYjgbXLPAoxXial3TG5OqGEfe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -165,7 +163,7 @@
       <workItem from="1639039806391" duration="6125000" />
       <workItem from="1639051203633" duration="8416000" />
       <workItem from="1639060386191" duration="915000" />
-      <workItem from="1639061320860" duration="1341000" />
+      <workItem from="1639061320860" duration="2908000" />
     </task>
     <servers />
   </component>
@@ -186,31 +184,31 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1185" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1638369305971" />
-    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1639056052436">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="686" y="233" key="FileChooserDialogImpl" timestamp="1639063616801">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1639056052436" />
-    <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1638975911413" />
-    <state width="1877" height="190" key="GridCell.Tab.0.bottom" timestamp="1639062069789">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1639063616801" />
+    <state width="1493" height="188" key="GridCell.Tab.0.bottom" timestamp="1639064254693">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="141" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
-    <state width="1877" height="190" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
-    <state width="1877" height="190" key="GridCell.Tab.0.center" timestamp="1639062069789">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="188" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639064254693" />
+    <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
+    <state width="1493" height="188" key="GridCell.Tab.0.center" timestamp="1639064254692">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="141" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
-    <state width="1877" height="190" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
-    <state width="1877" height="190" key="GridCell.Tab.0.left" timestamp="1639062069789">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="188" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639064254692" />
+    <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
+    <state width="1493" height="188" key="GridCell.Tab.0.left" timestamp="1639064254692">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="141" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
-    <state width="1877" height="190" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
-    <state width="1877" height="190" key="GridCell.Tab.0.right" timestamp="1639062069789">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1493" height="188" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639064254692" />
+    <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
+    <state width="1493" height="188" key="GridCell.Tab.0.right" timestamp="1639064254693">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="141" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639056173538" />
-    <state width="1877" height="190" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1639062069789" />
+    <state width="1493" height="188" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639064254693" />
+    <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
     <state x="270" y="74" key="SettingsEditor" timestamp="1638268634267">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
