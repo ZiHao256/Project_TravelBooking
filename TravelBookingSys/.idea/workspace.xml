@@ -8,9 +8,9 @@
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery/3.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery/4.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/scenery/6.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/assets/观光塔.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Document/Document.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Document.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document/vue项目实例学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/vue项目实例学习.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TravelBooking/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/customer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking" afterDir="false" />
@@ -64,7 +64,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/vue_project/vue_travelbooking" />
   </component>
   <component name="ProjectId" id="21VYjgbXLPAoxXial3TG5OqGEfe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -81,19 +81,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ProgramDesignComprehensive/TakeOut_2.0/Code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_project\vue_travelbooking\src\assets\scenery" />
-      <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_project\vue_travelbooking\src\assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_project\vue_travelbooking\src\assets\scenery" />
       <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_travelbooking\src\components" />
       <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\TravelBooking\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_project\vue_travelbooking\src\assets\scenery" />
+      <recent name="E:\5th_term\数据库系统\上机\Project_TravelBooking\TravelBookingSys\vue_project\vue_travelbooking\src\assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -164,6 +164,7 @@
       <workItem from="1639051203633" duration="8416000" />
       <workItem from="1639060386191" duration="915000" />
       <workItem from="1639061320860" duration="2908000" />
+      <workItem from="1639097406668" duration="1078000" />
     </task>
     <servers />
   </component>
@@ -189,26 +190,26 @@
     </state>
     <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1639056052436" />
     <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1639063616801" />
-    <state width="1493" height="188" key="GridCell.Tab.0.bottom" timestamp="1639064254693">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1639098467614">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1493" height="188" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639064254693" />
-    <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
-    <state width="1493" height="188" key="GridCell.Tab.0.center" timestamp="1639064254692">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1639098467614" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1639098467614">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1493" height="188" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639064254692" />
-    <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
-    <state width="1493" height="188" key="GridCell.Tab.0.left" timestamp="1639064254692">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1639098467614" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1639098467614">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1493" height="188" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639064254692" />
-    <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
-    <state width="1493" height="188" key="GridCell.Tab.0.right" timestamp="1639064254693">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1639098467614" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1639098467614">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1493" height="188" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639064254693" />
-    <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1639063757244" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1639098467614" />
     <state x="270" y="74" key="SettingsEditor" timestamp="1638268634267">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

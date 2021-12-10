@@ -199,7 +199,7 @@ def show_res_flight(request):
             response['list'] = object_to_json(res_flight)
 
         else:
-            res_flight = RES_FLIGHT.objects.filter(custID=request.session.get('custID'))
+            res_flight = RES_FLIGHT.objects.filter(custID=request.session.get('custID')).order_by('-resvKey')
             listall = json.loads(serializers.serialize("json", res_flight))
             total = int(len(listall))
             pagesize = int(request.GET.get('pagesize'))
@@ -231,7 +231,7 @@ def show_res_hotel(request):
             response['list'] = object_to_json(res_flight)
 
         else:
-            res_hotel = RES_HOTEL.objects.filter(custID=request.session.get('custID'))
+            res_hotel = RES_HOTEL.objects.filter(custID=request.session.get('custID')).order_by('-resvKey')
             listall = json.loads(serializers.serialize("json", res_hotel))
             total = int(len(listall))
             pagesize = int(request.GET.get('pagesize'))
@@ -263,7 +263,7 @@ def show_res_bus(request):
             response['list'] = object_to_json(res_bus)
 
         else:
-            res_bus = RES_BUS.objects.filter(custID=request.session.get('custID'))
+            res_bus = RES_BUS.objects.filter(custID=request.session.get('custID')).order_by('-resvKey')
             listall = json.loads(serializers.serialize("json", res_bus))
             total = int(len(listall))
             pagesize = int(request.GET.get('pagesize'))

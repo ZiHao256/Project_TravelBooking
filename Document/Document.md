@@ -81,6 +81,9 @@ title: Document
 
 ## 数据库设计
 
+* 考虑一致性约束
+* 考虑事务原子性
+
 ### ER图
 
 ![ER图](Document.assets/ER图.jpg)
