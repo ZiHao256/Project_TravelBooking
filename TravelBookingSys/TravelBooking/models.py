@@ -36,8 +36,8 @@ class FLIGHTS(models.Model):
     price = models.IntegerField(null=False)
     numSeats = models.IntegerField(null=False)
     numAvail = models.IntegerField(null=False)
-    FromCity = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, related_name='FromCity')
-    ArivCity = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, related_name='ArivCity')
+    FromCity = models.ForeignKey('LOCATIONS', on_delete=models.PROTECT, null=False, related_name='FromCity')
+    ArivCity = models.ForeignKey('LOCATIONS', on_delete=models.PROTECT, null=False, related_name='ArivCity')
 
     class Meta:
         constraints = [
@@ -46,7 +46,7 @@ class FLIGHTS(models.Model):
 
 
 class HOTELS(models.Model):
-    location = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, primary_key=True)
+    location = models.ForeignKey('LOCATIONS', on_delete=models.PROTECT, null=False, primary_key=True)
     price = models.IntegerField(null=False)
     numRooms = models.IntegerField(null=False)
     numAvail = models.IntegerField(null=False)
@@ -58,7 +58,7 @@ class HOTELS(models.Model):
 
 
 class BUS(models.Model):
-    location = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, primary_key=True)
+    location = models.ForeignKey('LOCATIONS', on_delete=models.PROTECT, null=False, primary_key=True)
     price = models.IntegerField(null=False)
     numSeats = models.IntegerField(null=False)
     numAvail = models.IntegerField(null=False)

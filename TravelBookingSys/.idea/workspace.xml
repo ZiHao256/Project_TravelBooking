@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb83c780-3192-46c2-a2ff-cfa9a713488b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Document/Ant-Design-Vue.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document/Document.assets/用户-16380665714271.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Document/数据库大作业实验报告.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/数据库大作业实验报告.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TravelBooking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelBooking/views/administer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TravelBooking/views/administer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/bus.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/bus.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/customer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/customer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/flight.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/flight.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/hotel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/hotel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/location.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/admin/location.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/busList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/busList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/hotelList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue_project/vue_travelbooking/src/components/customer/hotelList.vue" afterDir="false" />
     </list>
@@ -44,6 +47,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -162,7 +166,7 @@
       <workItem from="1639271442965" duration="321000" />
       <workItem from="1639272250671" duration="5566000" />
       <workItem from="1639309972490" duration="2414000" />
-      <workItem from="1639316931146" duration="795000" />
+      <workItem from="1639316931146" duration="2416000" />
     </task>
     <servers />
   </component>
@@ -192,25 +196,25 @@
     </state>
     <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1639272283949" />
     <state x="686" y="233" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1639131912829" />
-    <state width="723" height="104" key="GridCell.Tab.0.bottom" timestamp="1639278684993">
+    <state width="1493" height="104" key="GridCell.Tab.0.bottom" timestamp="1639323575521">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="104" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639278684993" />
+    <state width="1493" height="104" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639323575521" />
     <state width="938" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1639236567068" />
-    <state width="723" height="104" key="GridCell.Tab.0.center" timestamp="1639278684993">
+    <state width="1493" height="104" key="GridCell.Tab.0.center" timestamp="1639323575521">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="104" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639278684993" />
+    <state width="1493" height="104" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639323575521" />
     <state width="938" height="247" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1639236567068" />
-    <state width="723" height="104" key="GridCell.Tab.0.left" timestamp="1639278684992">
+    <state width="1493" height="104" key="GridCell.Tab.0.left" timestamp="1639323575520">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="104" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639278684992" />
+    <state width="1493" height="104" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639323575520" />
     <state width="938" height="247" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1639236567068" />
-    <state width="723" height="104" key="GridCell.Tab.0.right" timestamp="1639278684993">
+    <state width="1493" height="104" key="GridCell.Tab.0.right" timestamp="1639323575521">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="104" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639278684993" />
+    <state width="1493" height="104" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639323575521" />
     <state width="938" height="247" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1639236567068" />
     <state x="270" y="74" key="SettingsEditor" timestamp="1639271427642">
       <screen x="0" y="0" width="1536" height="864" />
