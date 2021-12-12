@@ -17,7 +17,7 @@ class CUSTOMERS(models.Model):
 
     class Meta:
         constraints = [
-            models.CheckConstraint(check=models.Q(balance=(models.F("balance")-0)), name='check_balance')
+            models.CheckConstraint(check=models.Q(balance=(models.F("balance") - 0)), name='check_balance')
         ]
 
 
@@ -38,9 +38,10 @@ class FLIGHTS(models.Model):
     numAvail = models.IntegerField(null=False)
     FromCity = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, related_name='FromCity')
     ArivCity = models.ForeignKey('LOCATIONS', on_delete=models.CASCADE, null=False, related_name='ArivCity')
+
     class Meta:
         constraints = [
-            models.CheckConstraint(check=models.Q(price=(models.F("price")-0)), name='check_f_price')
+            models.CheckConstraint(check=models.Q(price=(models.F("price") - 0)), name='check_f_price')
         ]
 
 
@@ -49,9 +50,10 @@ class HOTELS(models.Model):
     price = models.IntegerField(null=False)
     numRooms = models.IntegerField(null=False)
     numAvail = models.IntegerField(null=False)
+
     class Meta:
         constraints = [
-            models.CheckConstraint(check=models.Q(price=(models.F("price")-0)), name='check_h_price')
+            models.CheckConstraint(check=models.Q(price=(models.F("price") - 0)), name='check_h_price')
         ]
 
 
@@ -60,9 +62,10 @@ class BUS(models.Model):
     price = models.IntegerField(null=False)
     numSeats = models.IntegerField(null=False)
     numAvail = models.IntegerField(null=False)
+
     class Meta:
         constraints = [
-            models.CheckConstraint(check=models.Q(price=(models.F("price")-0)), name='check_b_price')
+            models.CheckConstraint(check=models.Q(price=(models.F("price") - 0)), name='check_b_price')
         ]
 
 
@@ -80,6 +83,7 @@ class RES_FLIGHT(models.Model):
     buildTime = models.DateTimeField(null=True)
     startTime = models.DateTimeField(null=True)
     endTime = models.DateTimeField(null=True)
+
 
 class RES_HOTEL(models.Model):
     statusChoice = (
