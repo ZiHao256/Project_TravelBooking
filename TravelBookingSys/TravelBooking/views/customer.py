@@ -28,7 +28,7 @@ def deposit(request):
         print(type(request.GET.get('balance')))
         customer.balance += int(request.GET.get('balance'))
         customer.save()
-        response['msg'] = '充值成功'
+        response['msg'] = '充值成功,余额为: '+str(customer.balance)
         response['error_num'] = 0
     except Exception as e:
         response['msg'] = str(e)
